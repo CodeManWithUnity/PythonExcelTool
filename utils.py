@@ -1,4 +1,9 @@
+import glob
 import os
+import GlobalVariables as gv
+
+excel_file_path = gv.excel_folder_name
+excelfile_path_list= []
 
 # 读取excel文件夹下的所有文件并添加到容器列表中
 def get_file_path(path):
@@ -15,3 +20,10 @@ def remove_file(list,str):
         if str in excel_file:
             list.remove(excel_file)
     return list
+
+# 获取当前目录下的所有excel文件
+def get_all_excel_files():
+    excelfile_path_list = glob.glob(f'{excel_file_path}/*.xlsx')
+    excelfile_path_list = remove_file(excelfile_path_list,'~$')
+    return excelfile_path_list
+
