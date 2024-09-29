@@ -1,11 +1,10 @@
 import pandas as pd
 import GlobalVariables as gv
-from pathlib import Path
 from start import init_print
 import xml.etree.ElementTree as ET
 from openpyxl import load_workbook
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 import convert
 import os
 
@@ -28,7 +27,7 @@ def start(user_input):
             pass
         elif user_input == '5':
             pass
-        elif user_input == '6':
+        elif user_input == '0':
             os.system('cmd /c exit')
         else:
             print(Fore.RED + '请输入一个正确的数字' + Style.RESET_ALL)

@@ -30,6 +30,7 @@ def convert_xlsx_to_json():
         # 保存为JSON文件
         with open(json_path, 'w', encoding='utf-8') as json_file:
             json_file.write(json_data)
+        print(Fore.GREEN + f"{json_path} 转换csv完成！" + Style.RESET_ALL)
 # 转成xml文件
 def convert_xlsx_to_xml():
     pass
