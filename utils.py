@@ -27,3 +27,14 @@ def get_all_excel_files():
     excelfile_path_list = remove_file(excelfile_path_list,'~$')
     return excelfile_path_list
 
+# 获取所有数据路径函数
+def get_all_paths():
+    paths = {}
+    root = os.getcwd()
+    paths['xlsx'] = os.path.join(root, gv.excel_folder_name)
+    paths['csv'] = os.path.join(root, gv.csv_folder_name)
+    paths['xml'] = os.path.join(root, gv.xml_folder_name)
+    paths['json'] = os.path.join(root, gv.json_folder_name)
+    paths['lua'] = os.path.join(root, gv.lua_folder_name)
+    paths['bytes'] = os.path.join(root, gv.bytes_folder_name)
+    return paths

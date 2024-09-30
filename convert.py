@@ -178,11 +178,11 @@ def convert_xlsx_to_all():
     convert_xlsx_to_protobuf(True)
     convert_xlsx_to_bytes(True)
     convert_xlsx_to_sql(True)
-    
+
 
 # 打印所有的输出文件夹路径
 def debug_log_all_folder():
-    paths = gv.get_all_paths()
+    paths = utils.get_all_paths()
     print(Fore.YELLOW + f"---------所有输出数据的文件夹详情如下---------" + Style.RESET_ALL)
     for key, value in paths.items():
         str = key + "文件夹的目录是" + ':'+ value
