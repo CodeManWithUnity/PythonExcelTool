@@ -22,13 +22,27 @@ def start(user_input):
             convert.convert_xlsx_to_json()
         elif user_input == '3':
             convert.convert_xlsx_to_xml()
-            pass
         elif user_input == '4':
-            pass
+            convert.convert_xlsx_to_lua()
         elif user_input == '5':
+            pass
+        elif user_input == '6':
+            pass
+        elif user_input == '7':
+            pass
+        elif user_input == '8':
+            convert.convert_xlsx_to_bytes()
+            pass
+        elif user_input == '9':
+            pass
+        elif user_input == '10':
+            convert.debug_log_all_folder()
             pass
         elif user_input == '0':
             os.system('cmd /c exit')
+        elif user_input == '666':
+            convert.convert_xlsx_to_all()
+            pass
         else:
             print(Fore.RED + '请输入一个正确的数字' + Style.RESET_ALL)
             init_print()
